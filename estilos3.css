@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ead8c4;
+    color: #5a3825;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+.zona-segura {
+    background-color: rgb(241, 227, 206);
+    border: 3px solid #b77d3a;
+    border-radius: 25px;
+    padding: 35px;
+    margin: 40px auto;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(138, 86, 51, 0.25);
+    animation: aparecerZona 1s ease;
+}
+
+.zona-segura h2 {
+    font-size: 42px;
+    color: #9b652f;
+    margin-bottom: 15px;
+}
+
+.zona-segura > p {
+    font-size: 18px;
+    color: #6f4934;
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.temporizador {
+    background-color: rgba(255, 248, 235, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(138, 86, 51, 0.2);
+}
+
+.temporizador h3 {
+    color: #b77d3a;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#tiempo {
+    font-size: 65px;
+    font-weight: bold;
+    color: #d18719;
+    margin: 10px;
+    animation: respirar 2s infinite ease-in-out;
+}
+
+.temporizador button {
+    background-color: #b77d3a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.temporizador button:hover {
+    background-color: #d18719;
+    transform: scale(1.08);
+}
+
+@keyframes aparecerZona {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes respirar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ead8c4;
+    color: #5a3825;
+    line-height: 1.6;
+}
+
+a {
+    color: #9a6845;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #70401f;
+}
+
+header {
+    background-color: #c79b6b;
+    color: #4a2817;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(90, 56, 37, 0.2);
+}
+
+header h1 {
+    font-size: 38px;
+    animation: aparecer 1s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 17px;
+    padding: 15px;
+    background-color: #9a6845;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+nav ul li a {
+    color: #fff5e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f0c58b;
+    transform: scale(1.08);
+}
+
+main {
+    width: 70%;
+    float: left;
+    padding: 20px;
+}
+
+aside {
+    width: 30%;
+    float: right;
+    background-color: #f3e5d2;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 10px rgba(90, 56, 37, 0.2);
+}
+
+footer {
+    clear: both;
+    background-color: #7a4b2a;
+    color: #fff5e8;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.pasos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    text-align: center;
+}
+
+.paso {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.paso:hover {
+    transform: translateY(-8px);
+    background-color: rgba(243, 229, 210, 0.7);
+    box-shadow: 2px 5px 12px rgba(90, 56, 37, 0.2);
+}
+
+.numero {
+    display: block;
+    font-size: 95px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: aparecerNumero 1.2s ease;
+    transition: 0.3s;
+}
+
+.numero:hover {
+    transform: scale(1.15) rotate(-3deg);
+}
+
+.paso h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+    font-weight: 700;
+}
+
+.paso p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #654735;
+    margin: 0;
+}
+
+.paso-1 .numero,
+.paso-1 h2 {
+    color: #c98b45;
+}
+
+.paso-2 .numero,
+.paso-2 h2 {
+    color: #9a6845;
+}
+
+.paso-3 .numero,
+.paso-3 h2 {
+    color: #b87532;
+}
+
+.paso-4 .numero,
+.paso-4 h2 {
+    color: #70401f;
+}
+
+.imagen-uno {
+    width: 900px;
+    height: 264px;
+    margin-top: auto;
+    margin-inline: 60px;
+    border-radius: 15px;
+    box-shadow: 3px 4px 12px rgba(90, 56, 37, 0.3);
+    transition: 0.4s;
+}
+
+.imagen-dos {
+    width: 100px;
+    height: 300px;
+    margin-top: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 3px 4px 10px rgba(90, 56, 37, 0.25);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerNumero {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 800px) {
+    .pasos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    main {
+        width: 100%;
+        float: none;
+    }
+
+    aside {
+        width: 100%;
+        float: none;
+    }
+
+    .imagen-uno {
+        width: 100%;
+        height: auto;
+        margin-inline: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .numero {
+        font-size: 75px;
+    }
+}

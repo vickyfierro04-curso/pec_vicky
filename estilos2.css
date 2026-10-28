@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f3e5d0;
+    color: #4d3526;
+}
+
+header {
+    background-color: #c9a77b;
+    color: #fffaf2;
+    text-align: center;
+    padding: 25px;
+    animation: aparecer 1.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 35px;
+}
+
+nav {
+    background-color: #e6d2b5;
+    padding: 12px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5c4030;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #9a6a3a;
+}
+
+section {
+    background-color: #fffaf2;
+    width: 85%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px #c5aa8b;
+    animation: subir 1s ease;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #8b5e34;
+    border-bottom: 2px solid #d8bd98;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #795331;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.caja {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px #c5aa8b;
+}
+
+.caja1 {
+    background-color: #f1d7c0;
+}
+
+.caja2 {
+    background-color: #e3d4b8;
+}
+
+.caja3 {
+    background-color: #f2dfb3;
+}
+
+.caja4 {
+    background-color: #e8c9b8;
+}
+
+.caja5 {
+    background-color: #d9c7ad;
+}
+
+.caja-consejo {
+    background-color: #efe0ca;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.caja-consejo:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 3px 8px #c5aa8b;
+}
+
+ul {
+    line-height: 2;
+}
+
+.frase {
+    text-align: center;
+    background-color: #ead8c0;
+}
+
+.frase p {
+    font-size: 18px;
+}
+
+footer {
+    background-color: #8b6847;
+    color: #fffaf2;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu li {
+        margin: 5px;
+    }
+
+    section {
+        width: 95%;
+    }
+}
+
+.imagen-consejo {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
